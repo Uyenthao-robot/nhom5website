@@ -18,19 +18,27 @@
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
-        .button-container {
-            margin-bottom: 20px;
+        .intro-container {
+            margin-bottom: 30px;
+        }
+        .intro-container h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .audio-player {
+            margin-top: 20px;
         }
         .obstacle-container {
             display: flex;
             justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
+            margin-top: 40px;
         }
         .obstacle {
             background: linear-gradient(135deg, #6a11cb, #2575fc);
             padding: 15px 30px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #fff;
             text-decoration: none;
@@ -74,6 +82,15 @@
 <body>
     <h1>✨ Chào mừng đến nhóm 5! ✨</h1>
     
+    <!-- Giới thiệu và bài hát -->
+    <div class="intro-container">
+        <h2>Hãy cùng nghe bài hát giới thiệu về nhóm!</h2>
+        <audio controls class="audio-player">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
     <!-- Nút quay lại -->
     <div class="button-container">
         <a href="https://uyenthao-robot.github.io/" class="home-button">Trang chủ</a>
@@ -92,6 +109,8 @@
     </div>
     
     <!-- Video YouTube -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/3eASZwKQD74?si=OnntvciadMg09i2a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="video-container" style="margin-top: 40px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3eASZwKQD74?si=OnntvciadMg09i2a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
