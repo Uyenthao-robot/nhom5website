@@ -7,58 +7,62 @@
     <style>
         /* Cấu hình chung */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F9F9F9;
+            background: linear-gradient(to bottom, #FFEECC, #FFF7E1);
             color: #333;
         }
 
         header {
-            background-color: #FFCC99;
-            color: #663300;
+            background: linear-gradient(45deg, #FF9933, #FFCC99);
+            color: #FFF;
             padding: 20px;
             text-align: center;
-            border-bottom: 5px solid #FF9966;
+            border-bottom: 5px dashed #FF6600;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
 
         h1 {
-            font-size: 2.5em;
-            animation: fadeIn 2s ease-out;
+            font-size: 3em;
+            animation: rainbowText 2s infinite;
         }
 
         /* Thanh điều hướng */
         nav {
-            background-color: #FF9966;
+            background: linear-gradient(to right, #FF6600, #FF9966);
             overflow: hidden;
+            border-bottom: 3px solid #FF3300;
         }
         nav a {
             float: left;
             display: block;
-            color: white;
+            color: #FFF;
             text-align: center;
             padding: 15px 20px;
             text-decoration: none;
             font-size: 1.2em;
-            transition: background-color 0.3s;
+            transition: transform 0.3s, background-color 0.3s;
         }
         nav a:hover {
-            background-color: #FF6600;
+            background-color: #FF3300;
+            transform: rotate(-10deg);
         }
 
         /* Phần chính */
         main {
             padding: 20px;
-            background-color: white;
             margin: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #FFF;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
         section h3 {
-            color: #FF6600;
+            color: #FF3300;
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
+            text-shadow: 2px 2px #FF9966;
         }
 
         .song-container {
@@ -77,53 +81,62 @@
         .members-list li {
             text-align: center;
             font-size: 1.2em;
-            color: #FF6600;
-            transition: transform 0.3s;
+            color: #FF3300;
+            transition: transform 0.5s;
         }
         .members-list li:hover {
-            transform: scale(1.1);
+            transform: rotate(10deg) scale(1.2);
         }
 
-        /* Hình ảnh động động vật dễ thương */
+        .members-list img {
+            max-width: 120px;
+            animation: wiggle 1.5s infinite;
+        }
+
+        /* Hiệu ứng động vật dễ thương */
         .cute-animal {
             max-width: 100px;
-            animation: moveAround 5s infinite alternate;
+            animation: floatUpDown 3s infinite;
         }
 
         /* Footer */
         footer {
             text-align: center;
             padding: 15px;
-            background-color: #FFCC99;
+            background: linear-gradient(45deg, #FFCC99, #FF9966);
             color: #663300;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
-        
+
         footer a {
             color: #663300;
             text-decoration: none;
+            font-weight: bold;
         }
 
-        /* Hiệu ứng động */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        /* Hiệu ứng */
+        @keyframes rainbowText {
+            0% { color: red; }
+            25% { color: orange; }
+            50% { color: yellow; }
+            75% { color: green; }
+            100% { color: blue; }
         }
 
-        @keyframes moveAround {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(20px); }
+        @keyframes floatUpDown {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
 
-        /* Đoạn văn bản giới thiệu */
-        #intro {
-            text-align: center;
-            margin-bottom: 30px;
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
         }
 
-        /* Hiệu ứng bài hát */
         audio {
             margin-top: 15px;
         }
@@ -150,7 +163,7 @@
 
     <section id="song" class="song-container">
         <h3>Bài hát giới thiệu của nhóm</h3>
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/frAhxXbLetk?si=1H3T7G9k3g5xRJXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/frAhxXbLetk?si=1H3T7G9k3g5xRJXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 
     <section id="members">
