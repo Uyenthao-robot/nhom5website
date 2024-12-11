@@ -1,116 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chào mừng đến nhóm 5</title>
+    <title>Nhóm 5 - Trang Chủ</title>
     <style>
         body {
-            font-family: 'Times New Roman', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
             text-align: center;
-            color: #fff;
         }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        nav {
+            background-color: #444;
+            overflow: hidden;
         }
-        .intro-container {
-            margin-bottom: 30px;
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
         }
-        .intro-container h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
+        nav a:hover {
+            background-color: #575757;
         }
-        .audio-player {
+        main {
+            padding: 20px;
+            background-color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .song-container {
             margin-top: 20px;
         }
-        .obstacle-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 40px;
+        .members-list {
+            list-style-type: none;
+            padding: 0;
         }
-        .obstacle {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            padding: 15px 30px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-        }
-        .obstacle:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-        }
-        .home-button {
-            background-color: #ff6f61;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-        .home-button:hover {
-            background-color: #ff4d41;
-        }
-        .back-button {
-            background-color: #4CAF50;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 20px;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
-        .back-button:hover {
-            background-color: #45a049;
+        .members-list li {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <h1>✨ Chào mừng đến nhóm 5! ✨</h1>
-    
-    <!-- Giới thiệu và bài hát -->
-    <div class="intro-container">
-        <h2>Hãy cùng nghe bài hát giới thiệu về nhóm!</h2>
-        <audio controls class="audio-player">
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    
-    <!-- Nút quay lại -->
-    <div class="button-container">
-        <a href="https://uyenthao-robot.github.io/" class="home-button">Trang chủ</a>
-    </div>
-    
-    <!-- Nút quay lại -->
-    <div class="button-container">
-        <a href="javascript:history.back()" class="back-button">Quay lại</a>
-    </div>
 
-    <!-- Các liên kết đến các thành viên -->
-    <div class="obstacle-container">
-        <a href="https://uyenthao-robot.github.io/nghi/" class="obstacle">Quang Nghị</a>
-        <a href="https://uyenthao-robot.github.io/hang/" class="obstacle">Nguyệt Hằng</a>
-        <a href="https://uyenthao-robot.github.io/thao/" class="obstacle">Uyên Thảo</a>
-    </div>
-    
-    <!-- Video YouTube -->
-    <div class="video-container" style="margin-top: 40px;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/3eASZwKQD74?si=OnntvciadMg09i2a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+<header>
+    <h1>Chào mừng đến với Nhóm 5</h1>
+</header>
+
+<nav>
+    <a href="#members">Thành viên nhóm</a>
+    <a href="#assignments">Bài tập</a>
+    <a href="#activities">Hoạt động khác</a>
+</nav>
+
+<main>
+    <section id="intro">
+        <h2>Giới thiệu nhóm</h2>
+        <p>Chào mừng bạn đến với trang web của Nhóm 5! Chúng tôi là một nhóm sáng tạo và đầy nhiệt huyết, cùng nhau học hỏi và phát triển. Dưới đây là bài hát giới thiệu nhóm của chúng tôi.</p>
+    </section>
+
+    <section id="song" class="song-container">
+        <h3>Bài hát giới thiệu của nhóm</h3>
+        <audio controls>
+            <source src="duong-dan-bai-hat-cua-ban.mp3" type="audio/mp3">
+            Trình duyệt của bạn không hỗ trợ thẻ audio.
+        </audio>
+    </section>
+
+    <section id="members">
+        <h3>Thành viên nhóm</h3>
+        <ul class="members-list">
+            <li><a href="https://link-den-trang-ca-nhan-thanh-vien-1.com" target="_blank">Nguyễn Văn A</a></li>
+            <li><a href="https://link-den-trang-ca-nhan-thanh-vien-2.com" target="_blank">Trần Thị B</a></li>
+            <li><a href="https://link-den-trang-ca-nhan-thanh-vien-3.com" target="_blank">Lê Văn C</a></li>
+        </ul>
+    </section>
+
+    <section id="assignments">
+        <h3>Bài tập</h3>
+        <p>Tất cả bài tập nhóm sẽ được cập nhật ở đây. Hãy thường xuyên kiểm tra để không bỏ lỡ bất kỳ thông tin quan trọng nào.</p>
+    </section>
+
+    <section id="activities">
+        <h3>Hoạt động khác</h3>
+        <p>Nhóm cũng tham gia nhiều hoạt động ngoài trời, các buổi học tập và các sự kiện xã hội. Thông tin chi tiết sẽ được cập nhật tại đây.</p>
+    </section>
+</main>
+
+<footer>
+    <p>Email nhóm: <a href="mailto:nhom5@example.com" style="color: white;">nhom5@example.com</a></p>
+    <p>Số điện thoại liên lạc: <a href="tel:+84123456789" style="color: white;">+84 123 456 789</a></p>
+</footer>
+
 </body>
 </html>
