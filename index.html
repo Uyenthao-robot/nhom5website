@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chào mừng đến nhóm 5</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        .obstacle-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .obstacle {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+        .obstacle:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        }
+        .home-button {
+            background-color: #ff6f61;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .home-button:hover {
+            background-color: #ff4d41;
+        }
+        .back-button {
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>✨ Chào mừng đến nhóm 5! ✨</h1>
+    
+    <!-- Nút quay lại -->
+    <div class="button-container">
+        <a href="https://uyenthao-robot.github.io/" class="home-button">Trang chủ</a>
+    </div>
+    
+    <!-- Nút quay lại -->
+    <div class="button-container">
+        <a href="javascript:history.back()" class="back-button">Quay lại</a>
+    </div>
+
+    <!-- Các liên kết đến các thành viên -->
+    <div class="obstacle-container">
+        <a href="https://uyenthao-robot.github.io/nghi/" class="obstacle">Quang Nghị</a>
+        <a href="https://uyenthao-robot.github.io/hang/" class="obstacle">Nguyệt Hằng</a>
+        <a href="https://uyenthao-robot.github.io/thao/" class="obstacle">Uyên Thảo</a>
+    </div>
+    
+    <!-- Video YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3eASZwKQD74?si=OnntvciadMg09i2a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
