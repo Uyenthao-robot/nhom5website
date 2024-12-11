@@ -5,20 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhóm 5 - Trang Chủ</title>
     <style>
+        /* Cấu hình chung */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #F9F9F9;
+            color: #333;
         }
+
         header {
-            background-color: #333;
-            color: white;
-            padding: 15px 0;
+            background-color: #FFCC99;
+            color: #663300;
+            padding: 20px;
             text-align: center;
+            border-bottom: 5px solid #FF9966;
         }
+
+        h1 {
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Thanh điều hướng */
         nav {
-            background-color: #444;
+            background-color: #FF9966;
             overflow: hidden;
         }
         nav a {
@@ -26,34 +37,95 @@
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 20px;
+            padding: 15px 20px;
             text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #575757;
+            background-color: #FF6600;
         }
+
+        /* Phần chính */
         main {
             padding: 20px;
             background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        section h3 {
+            color: #FF6600;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .song-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .members-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .members-list li {
+            text-align: center;
+            font-size: 1.2em;
+            color: #FF6600;
+            transition: transform 0.3s;
+        }
+        .members-list li:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hình ảnh động động vật dễ thương */
+        .cute-animal {
+            max-width: 100px;
+            animation: moveAround 5s infinite alternate;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
+            padding: 15px;
+            background-color: #FFCC99;
+            color: #663300;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
-        .song-container {
-            margin-top: 20px;
+        
+        footer a {
+            color: #663300;
+            text-decoration: none;
         }
-        .members-list {
-            list-style-type: none;
-            padding: 0;
+
+        /* Hiệu ứng động */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
-        .members-list li {
-            margin: 10px 0;
+
+        @keyframes moveAround {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
+        }
+
+        /* Đoạn văn bản giới thiệu */
+        #intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Hiệu ứng bài hát */
+        audio {
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -72,40 +144,53 @@
 <main>
     <section id="intro">
         <h2>Giới thiệu nhóm</h2>
-        <p>Chào mừng bạn đến với trang web của Nhóm 5! Chúng tôi là một nhóm sáng tạo và đầy nhiệt huyết, cùng nhau học hỏi và phát triển. Dưới đây là bài hát giới thiệu nhóm của chúng tôi.</p>
+        <p>Chào mừng bạn đến với trang web của Nhóm 5! Chúng tôi là một nhóm sáng tạo, năng động và yêu thích học hỏi. Dưới đây là bài hát giới thiệu nhóm của chúng tôi. Hãy nghe và cảm nhận!</p>
+        <img src="https://media.giphy.com/media/26u4b5wRjvsYpHcP2/giphy.gif" alt="Cute Animal" class="cute-animal">
     </section>
 
     <section id="song" class="song-container">
         <h3>Bài hát giới thiệu của nhóm</h3>
-        <audio controls>
-            <source src="duong-dan-bai-hat-cua-ban.mp3" type="audio/mp3">
-            Trình duyệt của bạn không hỗ trợ thẻ audio.
-        </audio>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/frAhxXbLetk?si=1H3T7G9k3g5xRJXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>>
     </section>
 
     <section id="members">
         <h3>Thành viên nhóm</h3>
         <ul class="members-list">
-            <li><a href="https://link-den-trang-ca-nhan-thanh-vien-1.com" target="_blank">Nguyễn Văn A</a></li>
-            <li><a href="https://link-den-trang-ca-nhan-thanh-vien-2.com" target="_blank">Trần Thị B</a></li>
-            <li><a href="https://link-den-trang-ca-nhan-thanh-vien-3.com" target="_blank">Lê Văn C</a></li>
+            <li>
+                <a href="https://link-den-trang-ca-nhan-thanh-vien-1.com" target="_blank">
+                    Nguyễn Văn A
+                </a>
+                <img src="https://media.giphy.com/media/l0Exk8EUzF7gzGrsU/giphy.gif" alt="Cute Cat" class="cute-animal">
+            </li>
+            <li>
+                <a href="https://link-den-trang-ca-nhan-thanh-vien-2.com" target="_blank">
+                    Trần Thị B
+                </a>
+                <img src="https://media.giphy.com/media/26gs6pqI9GfW0zgmU/giphy.gif" alt="Cute Dog" class="cute-animal">
+            </li>
+            <li>
+                <a href="https://link-den-trang-ca-nhan-thanh-vien-3.com" target="_blank">
+                    Lê Văn C
+                </a>
+                <img src="https://media.giphy.com/media/3o7qE3P2T9UGFpo0gY/giphy.gif" alt="Cute Panda" class="cute-animal">
+            </li>
         </ul>
     </section>
 
     <section id="assignments">
         <h3>Bài tập</h3>
-        <p>Tất cả bài tập nhóm sẽ được cập nhật ở đây. Hãy thường xuyên kiểm tra để không bỏ lỡ bất kỳ thông tin quan trọng nào.</p>
+        <p>Tất cả bài tập nhóm sẽ được cập nhật ở đây. Hãy thường xuyên kiểm tra để không bỏ lỡ bất kỳ thông tin quan trọng nào!</p>
     </section>
 
     <section id="activities">
         <h3>Hoạt động khác</h3>
-        <p>Nhóm cũng tham gia nhiều hoạt động ngoài trời, các buổi học tập và các sự kiện xã hội. Thông tin chi tiết sẽ được cập nhật tại đây.</p>
+        <p>Nhóm tham gia các hoạt động như học nhóm, dã ngoại, và các buổi chia sẻ kiến thức. Thông tin chi tiết sẽ được cập nhật tại đây.</p>
     </section>
 </main>
 
 <footer>
-    <p>Email nhóm: <a href="mailto:nhom5@example.com" style="color: white;">nhom5@example.com</a></p>
-    <p>Số điện thoại liên lạc: <a href="tel:+84123456789" style="color: white;">+84 123 456 789</a></p>
+    <p>Email nhóm: <a href="mailto:nhom5@example.com">nhom5@example.com</a></p>
+    <p>Số điện thoại liên lạc: <a href="tel:+84123456789">+84 123 456 789</a></p>
 </footer>
 
 </body>
